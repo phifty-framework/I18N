@@ -1,0 +1,17 @@
+{#
+vim:filetype=htmldjango:
+#}
+{% set listRegionId = CRUDHandler.get('listInnerRegion').getRegionId() %}
+<div class="toolbar-control">
+    <div class="label">{% trans 'Language' %}</div>
+    <select name="_filter_lang" id="crud-list-filter-lang lang-chooser" 
+        onchange=" return (function(o) { 
+        $('#{{ listRegionId }}').asRegion().refreshWith({ _filter_lang: o.value, page: 1 });
+    })(this);">
+        <option></option>
+        {% for code,name in Locale.available %}
+            <option value="{{ code }}">{{ name }}</option>
+        {% endfor %}
+    </select>
+</div>
+<div class="toolbar-divider"> </div>

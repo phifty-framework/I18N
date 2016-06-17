@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php
+require 'main.php';
+kernel()->library->load('zh2gb');
+
+$f = fopen( 'php://stdin', 'r' );
+while( $line = fgets( $f ) ) {
+    echo zh2gb($line);
+}
+fclose( $f );
+// $input = file_get_contents('php://input');
+// echo zh2gb($input);
