@@ -2,7 +2,7 @@
 namespace I18N\Model;
 use LazyRecord\Schema\RuntimeSchema;
 use LazyRecord\Schema\RuntimeColumn;
-use LazyRecord\Schema\Relationship;
+use LazyRecord\Schema\Relationship\Relationship;
 class I18NSchemaProxy
     extends RuntimeSchema
 {
