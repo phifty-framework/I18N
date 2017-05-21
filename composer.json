@@ -4,14 +4,14 @@
     "description": "core bundle that includes commonly used assets",
     "license": "proprietary",
     "require": {
-        "phifty/phifty": "^3.1.0",
-        "composer/installers": "dev-master"
+        "phifty/phifty": "4.0.x-dev",
+        "composer/installers": "^1"
     },
     "authors": [
         { "name": "c9s", "email": "yoanlin93@gmail.com" }
     ],
     "autoload": { "psr-4":  { "I18N\\": "" } },
     "extra": {
-        "branch-alias": { "dev-master": "3.1.x-dev" }
+        "branch-alias": { "dev-master": "4.0.x-dev" }
     }
 }
