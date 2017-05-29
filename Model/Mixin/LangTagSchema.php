@@ -1,6 +1,8 @@
 <?php
+
 namespace I18N\Model\Mixin;
-use LazyRecord\Schema\MixinDeclareSchema;
+
+use Maghead\Schema\MixinDeclareSchema;
 
 class LangTagSchema extends MixinDeclareSchema
 {
