@@ -1,15 +1,16 @@
 <?php
 namespace I18N\Model\Mixin;
-use LazyRecord\Schema\MixinSchemaDeclare;
 
-class I18NSchema extends MixinSchemaDeclare
+use Maghead\Schema\MixinDeclareSchema;
+
+class I18NSchema extends MixinDeclareSchema
 {
     public function schema()
     {
         $this->column('lang')
             ->varchar(12)
             ->validValues(function() {
-                return array_flip( kernel()->locale->available() );
+                return array_flip(kernel()->locale->available());
             })
             ->label('語言')
             ->default( function() {

@@ -1,15 +1,15 @@
 <?php
 namespace I18N\Model;
-use LazyRecord\Schema\SchemaDeclare;
 
-class I18NSchema extends SchemaDeclare
+use Maghead\Schema\DeclareSchema;
+
+class I18NSchema extends DeclareSchema
 {
-    function schema()
+    public function schema()
     {
+        $this->table('i18n_messages');
         $this->column('msgid')->varchar(512);
         $this->column('msgstr')->text();
         $this->column('lang')->varchar(12);
     }
 }
-
-

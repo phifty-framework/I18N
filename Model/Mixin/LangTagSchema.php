@@ -1,8 +1,8 @@
 <?php
 namespace I18N\Model\Mixin;
-use LazyRecord\Schema\MixinSchemaDeclare;
+use LazyRecord\Schema\MixinDeclareSchema;
 
-class LangTagSchema extends MixinSchemaDeclare
+class LangTagSchema extends MixinDeclareSchema
 {
     public function schema()
     {
